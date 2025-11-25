@@ -2,7 +2,7 @@
 
 A complete observability solution integrating **Grafana**, **Prometheus**, **Loki**, and **Mimir** for comprehensive metrics and log monitoring on macOS.
 
-![Observability Platform Architecture](/.gemini/antigravity/brain/15eb1fec-0b27-4f82-9b13-559b07950d08/observability_architecture_1764044009766.png)
+![Observability Platform Architecture](Architecture.png)
 
 ## Overview
 
@@ -13,7 +13,9 @@ This platform provides end-to-end observability with:
 - **Unified Visualization** - Grafana dashboards combining metrics and logs
 
 ## Architecture
-![alt text](Architecture.png)
+
+![Observability Platform Architecture](Architecture.png)
+
 ### Components
 
 | Component | Version | Port | Purpose |
@@ -364,7 +366,6 @@ For issues or questions:
 - Check service logs
 - Verify configuration files
 - Test API endpoints
-- Review the [walkthrough documentation](/.gemini/antigravity/brain/15eb1fec-0b27-4f82-9b13-559b07950d08/walkthrough.md)
 
 ## Version Information
 
