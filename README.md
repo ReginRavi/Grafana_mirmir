@@ -358,21 +358,6 @@ cat /opt/homebrew/etc/promtail-local-config.yaml
 **Schema:** v13 with TSDB  
 **Ingestion:** Via Promtail
 
-## Support
 
-For issues or questions:
-- Check service logs
-- Verify configuration files
-- Test API endpoints
-
-## Version Information
-
-- **Platform:** macOS (ARM64)
-- **Installation Date:** 2025-11-25
-- **Last Updated:** 2025-11-25
-
----
-
-**Status:** ✅ All services operational
 
 Access your observability platform at **http://localhost:3000**
