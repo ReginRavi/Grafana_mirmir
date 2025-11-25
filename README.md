@@ -14,8 +14,6 @@ This platform provides end-to-end observability with:
 
 ## Architecture
 
-![Observability Platform Architecture](Architecture.png)
-
 ### Components
 
 | Component | Version | Port | Purpose |
