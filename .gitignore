@@ -1,0 +1,20 @@
+# Data directories
+mimir-data/
+
+# Logs
+*.log
+mimir-stdout.log
+mimir-stderr.log
+
+# Binary
+mimir
+
+# Backup files
+*.backup
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.swp

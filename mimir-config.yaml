@@ -1,0 +1,91 @@
+# Mimir single-process configuration for local development
+# This configuration runs Mimir in a simple mode suitable for testing and development
+
+# Basic server configuration
+target: all
+
+server:
+  http_listen_port: 9009
+  grpc_listen_port: 9095
+  log_level: info
+
+# Common configuration
+common:
+  storage:
+    backend: filesystem
+    filesystem:
+      dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/tsdb
+
+# Distributor configuration
+distributor:
+  ring:
+    kvstore:
+      store: inmemory
+
+# Ingester configuration
+ingester:
+  ring:
+    kvstore:
+      store: inmemory
+    replication_factor: 1
+
+# Blocks storage configuration
+blocks_storage:
+  backend: filesystem
+  filesystem:
+    dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/blocks
+  bucket_store:
+    sync_dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/tsdb-sync
+  tsdb:
+    dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/tsdb
+
+# Compactor configuration
+compactor:
+  data_dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/compactor
+  sharding_ring:
+    kvstore:
+      store: inmemory
+
+# Store gateway configuration
+store_gateway:
+  sharding_ring:
+    kvstore:
+      store: inmemory
+    replication_factor: 1
+
+# Ruler configuration
+ruler:
+  rule_path: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/rules
+
+# Ruler storage configuration
+ruler_storage:
+  backend: filesystem
+  filesystem:
+    dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/ruler
+
+# Alertmanager configuration
+alertmanager:
+  data_dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/alertmanager
+  sharding_ring:
+    kvstore:
+      store: inmemory
+    replication_factor: 1
+
+# Alertmanager storage configuration
+alertmanager_storage:
+  backend: filesystem
+  filesystem:
+    dir: /Users/reginravi/Documents/Grafana_Mirmir_loki/mimir-data/alertmanager-storage
+
+# Limits configuration
+limits:
+  # Set max global series per user (per tenant)
+  max_global_series_per_user: 150000
+  # Set ingestion rate limit
+  ingestion_rate: 10000
+  ingestion_burst_size: 200000
+
+# Memberlist configuration (used for distributed hash ring)
+memberlist:
+  join_members: []
+  bind_port: 7946
