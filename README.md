@@ -13,7 +13,7 @@ This platform provides end-to-end observability with:
 - **Unified Visualization** - Grafana dashboards combining metrics and logs
 
 ## Architecture
-
+![alt text](Architecture.png)
 ### Components
 
 | Component | Version | Port | Purpose |
